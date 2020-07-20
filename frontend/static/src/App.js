@@ -3,7 +3,6 @@ import './App.css';
 
 import Landing from './stateless/landing.js'; 
 
-
 class App extends Component {
   
   render() {
