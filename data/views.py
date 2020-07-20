@@ -13,7 +13,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = ContactSerializer
 
     def create(self, request, *args, **kwargs):
-
+        ## first, add to csv file
         if os.stat('data.csv').st_size > 0:
             df = pd.read_csv('data.csv')
             vals = list(request.data.values())
