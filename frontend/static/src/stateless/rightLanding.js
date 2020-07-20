@@ -20,8 +20,6 @@ class RightLanding extends Component {
                     </button>
                 </div>
 
-                {/* button will go here */}
-
             </div>
             </React.Fragment>
         )
