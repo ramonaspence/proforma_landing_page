@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'https://prostores.herokuapp.com/'
+    'prostores.herokuapp.com/'
 ]
 
 
@@ -50,6 +50,19 @@ INSTALLED_APPS = [
     'frontend.apps.FrontendConfig',
     'data.apps.DataConfig',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # session id from server is stored in a cookie and passed in headers
+        'rest_framework.authentication.SessionAuthentication',
+        # token is stored by the client and passed in the headers
+        # server confirms that token is valid
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
