@@ -16,12 +16,6 @@ class Landing extends Component {
         
 }
 
-// scrollToForm = () =>  window.scroll({
-//     top: this.scrollToForm.current.offsetTop,
-//     left: 0,
-//     behavior: 'smooth'
-//   });
-
     render() {
         return(
             <div className="container-fluid main">
