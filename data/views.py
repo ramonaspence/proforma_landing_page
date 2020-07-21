@@ -12,8 +12,9 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
+
     def create(self, request, *args, **kwargs):
-        ## first, add to csv file
+        ## add new entry to csv file
         if os.stat('data.csv').st_size > 0:
             df = pd.read_csv('data.csv')
             vals = list(request.data.values())
@@ -41,6 +42,8 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 }
             df = pd.DataFrame(my_dict)
             df.to_csv('data.csv', index=0)
+
+            # pydrive here??
 
 
         return super().create(request, *args, **kwargs)
