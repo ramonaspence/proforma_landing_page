@@ -161,7 +161,3 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'frontend/static/build/static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# CLIENT_ID = os.environ['CLIENT_ID']
-# CLIENT_SECRET = os.environ['CLIENT_SECRET']
-# API_KEY = os.environ['GOOGLE_DRIVE_API_KEY']
