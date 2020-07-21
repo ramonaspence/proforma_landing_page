@@ -157,7 +157,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 REACT_APP_DIR = os.path.join(BASE_DIR, 'frontend/static')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'frontend/static/build/static'),)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'frontend/static/build/static'),
+    os.path.join(BASE_DIR, 'static'),
+]
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
