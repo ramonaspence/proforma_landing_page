@@ -15,6 +15,7 @@ pandas = "*"
 requests = "*"
 pydrive = "*"
 psycopg2-binary = "*"
+heroku = "*"
 
 [requires]
 python_version = "3.7"
