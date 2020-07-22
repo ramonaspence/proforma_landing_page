@@ -156,7 +156,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 REACT_APP_DIR = os.path.join(BASE_DIR, 'frontend/static')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'frontend/static/build/static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'frontend/static/'),)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 SITE_ID = 1
