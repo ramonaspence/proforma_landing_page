@@ -45,17 +45,37 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 'locations': vals[4:],
                 }
             df = pd.DataFrame(my_dict)
-            df.to_csv('data.csv', index=0)
+            df.to_csv('data.csv', )
+
+        # gauth = GoogleAuth()
+        # gauth.LocalWebserverAuth() # Creates local webserver and auto handles authentication.
 
         gauth = GoogleAuth()
-        gauth.LocalWebserverAuth() # Creates local webserver and auto handles authentication.
+        # Try to load saved client credentials
+        gauth.LoadCredentialsFile("mycreds.txt")
+        if gauth.credentials is None:
+            # Authenticate if they're not there
+            gauth.LocalWebserverAuth()
+        elif gauth.access_token_expired:
+            # Refresh them if expired
+            gauth.Refresh()
+        else:
+            # Initialize the saved creds
+            gauth.Authorize()
+        # Save the current credentials to a file
+        gauth.SaveCredentialsFile("mycreds.txt")
 
         drive = GoogleDrive(gauth)
 
-        file1 = drive.CreateFile()
+        # View all folders and file in your Google Drive
+        fileList = drive.ListFile({'q': "'root' in parents and trashed=false"}).GetList()
+        for file in fileList:
+            # Get the ID that you want
+            if(file['title'] == "data.csv"):
+                fileID = file['id']
+
+        file1 = drive.CreateFile({'id': fileID})
         file1.SetContentFile('data.csv')
         file1.Upload()
-        
-
 
         return super().create(request, *args, **kwargs)
