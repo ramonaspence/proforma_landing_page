@@ -15,6 +15,6 @@ class IndexView(View):
                 return HttpResponse(f.read())
         except FileNotFoundError:
             logging.exception('Production build of this app not found')
-            return HttpResponse(
+            return HttpResponse('Please',
                 status = 501,
             )
