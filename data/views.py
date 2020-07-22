@@ -45,7 +45,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 '# of locations': vals[4:],
                 }
             df = pd.DataFrame(my_dict)
-            df.to_csv('data.csv', )
+            df.to_csv('data.csv',)
 
         # gauth = GoogleAuth()
         # gauth.LocalWebserverAuth() # Creates local webserver and auto handles authentication.
