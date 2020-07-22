@@ -29,7 +29,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 'last_name': vals[1:2],
                 'email': vals[2:3],
                 'company': vals[3:4],
-                'locations': vals[4:],
+                '# of locations': vals[4:],
                 }
                 new_df = pd.DataFrame(vals_dict)
                 new_df.to_csv('data.csv', mode='a', header=False)
@@ -42,7 +42,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 'last_name': vals[1:2],
                 'email': vals[2:3],
                 'company': vals[3:4],
-                'locations': vals[4:],
+                '# of locations': vals[4:],
                 }
             df = pd.DataFrame(my_dict)
             df.to_csv('data.csv', )
