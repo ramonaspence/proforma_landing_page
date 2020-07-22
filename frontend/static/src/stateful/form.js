@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import '../App.css'
 import axios from 'axios';
 
-import scrollToForm from '../stateless/rightLanding'
-
 import pdf from '../media/questionnaire.pdf'
 
 axios.defaults.xsrfCookieName = 'csrftoken';

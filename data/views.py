@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, authentication
 from .serializers import ContactSerializer
 from .models import Contact
 from django.conf import settings
@@ -7,8 +7,12 @@ import pandas as pd
 import json
 import os
 
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
+
 
 class ContactListCreateAPIView(generics.ListCreateAPIView):
+    authentication_classes = [authentication.TokenAuthentication, authentication.SessionAuthentication]
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
@@ -43,7 +47,15 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
             df = pd.DataFrame(my_dict)
             df.to_csv('data.csv', index=0)
 
-            # pydrive here??
+        gauth = GoogleAuth()
+        gauth.LocalWebserverAuth() # Creates local webserver and auto handles authentication.
+
+        drive = GoogleDrive(gauth)
+
+        file1 = drive.CreateFile()
+        file1.SetContentFile('data.csv')
+        file1.Upload()
+        
 
 
         return super().create(request, *args, **kwargs)
