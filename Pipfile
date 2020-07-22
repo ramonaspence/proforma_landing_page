@@ -6,15 +6,15 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "*"
+django = "==3.0.4"
 django-rest-framework = "*"
-whitenoise = "*"
 gunicorn = "*"
 dj-database-url = "*"
 pandas = "*"
 requests = "*"
 pydrive = "*"
 psycopg2-binary = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.7"
