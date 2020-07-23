@@ -72,7 +72,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
         fileList = drive.ListFile({'q': "'root' in parents and trashed=false"}).GetList()
         for file in fileList:
             # Get the ID that you want
-            if(file['title'] == "data.csv"):
+            if(file['title'] == "./data/data/data.csv"):
                 fileID = file['id']
 
         file1 = drive.CreateFile({'id': fileID})

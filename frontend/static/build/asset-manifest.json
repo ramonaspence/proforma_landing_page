@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.780d4978.chunk.css",
-    "main.js": "/static/js/main.ea308f3c.chunk.js",
-    "main.js.map": "/static/js/main.ea308f3c.chunk.js.map",
+    "main.css": "/static/css/main.8fcd5e6a.chunk.css",
+    "main.js": "/static/js/main.d1c8d0f7.chunk.js",
+    "main.js.map": "/static/js/main.d1c8d0f7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.34b54e52.js",
     "runtime-main.js.map": "/static/js/runtime-main.34b54e52.js.map",
-    "static/js/2.d7158df9.chunk.js": "/static/js/2.d7158df9.chunk.js",
-    "static/js/2.d7158df9.chunk.js.map": "/static/js/2.d7158df9.chunk.js.map",
+    "static/js/2.9455e467.chunk.js": "/static/js/2.9455e467.chunk.js",
+    "static/js/2.9455e467.chunk.js.map": "/static/js/2.9455e467.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8e3903022df3057c7306a7897f04d591.js": "/precache-manifest.8e3903022df3057c7306a7897f04d591.js",
+    "precache-manifest.85a302117fd749ea5970fc27d985ed37.js": "/precache-manifest.85a302117fd749ea5970fc27d985ed37.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.780d4978.chunk.css.map": "/static/css/main.780d4978.chunk.css.map",
-    "static/js/2.d7158df9.chunk.js.LICENSE.txt": "/static/js/2.d7158df9.chunk.js.LICENSE.txt",
+    "static/css/main.8fcd5e6a.chunk.css.map": "/static/css/main.8fcd5e6a.chunk.css.map",
+    "static/js/2.9455e467.chunk.js.LICENSE.txt": "/static/js/2.9455e467.chunk.js.LICENSE.txt",
     "static/media/Gobold_Bold.ttf": "/static/media/Gobold_Bold.90fca1a9.ttf",
     "static/media/MinionPro-Regular.otf": "/static/media/MinionPro-Regular.38711b5b.otf",
     "static/media/Univers-Bold.otf": "/static/media/Univers-Bold.5da62e29.otf",
     "static/media/UniversLTStd-Light.otf": "/static/media/UniversLTStd-Light.61b231f4.otf",
     "static/media/UniversLTStd-UltraCn.otf": "/static/media/UniversLTStd-UltraCn.4e99d576.otf",
     "static/media/pc.png": "/static/media/pc.0d6246f2.png",
+    "static/media/proforma_logo.png": "/static/media/proforma_logo.8a4e94a6.png",
     "static/media/prostores.png": "/static/media/prostores.4346321e.png",
     "static/media/questionnaire.pdf": "/static/media/questionnaire.25b7146a.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.34b54e52.js",
-    "static/js/2.d7158df9.chunk.js",
-    "static/css/main.780d4978.chunk.css",
-    "static/js/main.ea308f3c.chunk.js"
+    "static/js/2.9455e467.chunk.js",
+    "static/css/main.8fcd5e6a.chunk.css",
+    "static/js/main.d1c8d0f7.chunk.js"
   ]
 }

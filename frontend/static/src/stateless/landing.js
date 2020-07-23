@@ -4,8 +4,8 @@ import '../App.css'
 
 import MainLanding from './mainLanding.js';
 import RightLanding from './rightLanding.js';
-import Form from '../stateful/form'
-
+import Form from '../stateful/form';
+import Footer from './footer.js';
 
 class Landing extends Component {
     constructor() {
@@ -33,6 +33,10 @@ class Landing extends Component {
 
                 <div className="row">
                     <Form scrollDiv={this.scrollDiv} />
+                </div>
+
+                <div className="row">
+                    <Footer />
                 </div>
             </div>
         )
