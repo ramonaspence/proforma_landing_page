@@ -5,11 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // fonts
-import './media/fonts/Gobold_Bold.ttf';
-import './media/fonts/MinionPro-Regular.otf';
-import './media/fonts/Univers-Bold.otf';
-import './media/fonts/UniversLTStd-Light.otf';
-import './media/fonts/UniversLTStd-UltraCn.otf';
+import './media/Gobold_Bold.ttf';
+import './media/MinionPro-Regular.otf';
+import './media/Univers-Bold.otf';
+import './media/UniversLTStd-Light.otf';
+import './media/UniversLTStd-UltraCn.otf';
 
 
 ReactDOM.render(
