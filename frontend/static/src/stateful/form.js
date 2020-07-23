@@ -32,9 +32,15 @@ class Form extends Component {
 
     onClick(e) {
         // e.preventDefault();
-        
-        
-        axios.post(`${BASE_URL}/api/v1/contacts/`, this.state, {
+        console.log(this.state);
+        let formData = new FormData();
+        formData.append('first_name', this.state.first_name)
+        formData.append('last_name', this.state.last_name)
+        formData.append('email', this.state.email)
+        formData.append('company', this.state.company)
+        formData.append('locations', this.state.locations)
+
+        axios.post(`${BASE_URL}/api/v1/contacts/`, formData, {
             'Content-Type': 'multipart/form-data'
         })
         .then(res => console.log(res))
