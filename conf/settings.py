@@ -155,10 +155,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 REACT_APP_DIR = os.path.join(BASE_DIR, 'frontend/static')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'frontend/static/build'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'frontend/static/build/static'),)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 MEDIA_URL = '/media/'
