@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../App.css'
 import axios from 'axios';
 
-import pdf from '../media/questionnaire.pdf'
+import pdf from '../static/media/questionnaire.pdf'
 
 axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';

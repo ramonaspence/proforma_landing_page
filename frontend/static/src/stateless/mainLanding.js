@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import '../App.css'
 
 
-import prostores from '../media/prostores.png'
-import pc from '../media/pc.png'
-import icon_1 from '../media/icon_1.png'
-import icon_2 from '../media/icon_2.png'
-import icon_3 from '../media/icon_3.png'
-import icon_4 from '../media/icon_4.png'
-import icon_5 from '../media/icon_5.png'
-import icon_6 from '../media/icon_6.png'
+import prostores from '../static/media/prostores.png'
+import pc from '../static/media/pc.png'
+import icon_1 from '../static/media/icon_1.png'
+import icon_2 from '../static/media/icon_2.png'
+import icon_3 from '../static/media/icon_3.png'
+import icon_4 from '../static/media/icon_4.png'
+import icon_5 from '../static/media/icon_5.png'
+import icon_6 from '../static/media/icon_6.png'
 
 
 class MainLanding extends Component {
