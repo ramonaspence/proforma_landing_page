@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'GoBold';
-  src: url(r'./static/media/Gobold_Bold.ttf') format('truetype')
+  src: url('./static/media/Gobold_Bold.ttf') format('truetype')
 }
 
 @font-face {
