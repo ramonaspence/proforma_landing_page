@@ -1,26 +1,26 @@
 @font-face {
   font-family: 'GoBold';
-  src: url('./fonts/Gobold_Bold.ttf') format('truetype')
+  src: url('./media/fonts/Gobold_Bold.ttf') format('truetype')
 }
 
 @font-face {
   font-family: 'MinionPro';
-  src: url('./fonts/MinionPro-Regular.otf') format('opentype')
+  src: url('./media/fonts/MinionPro-Regular.otf') format('opentype')
 }
 
 @font-face {
   font-family: 'Univers';
-  src: local('Univers'), url('./fonts/Univers-Bold.otf') format('opentype')
+  src: local('Univers'), url('./media/fonts/Univers-Bold.otf') format('opentype')
 }
 
 @font-face {
   font-family: 'UniversLTStd';
-  src: local('UniverseLTStd'), url('./fonts/UniversLTStd-Light.otf') format('opentype')
+  src: local('UniverseLTStd'), url('./media/fonts/UniversLTStd-Light.otf') format('opentype')
 }
 
 @font-face {
   font-family: 'UniverseLTStd';
-  src: local('UniverseLTStd'), url('./fonts/UniversLTStd-UltraCn.otf') format('opentype')
+  src: local('UniverseLTStd'), url('./media/fonts/UniversLTStd-UltraCn.otf') format('opentype')
 }
 
 body {
