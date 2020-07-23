@@ -5,4 +5,4 @@ class Contact(models.Model):
     last_name = models.CharField(max_length = 255)
     email = models.CharField(max_length = 255)
     company = models.CharField(max_length = 255)
-    locations = models.IntegerField()
+    locations = models.PositiveIntegerField()

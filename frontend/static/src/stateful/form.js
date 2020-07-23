@@ -40,6 +40,8 @@ class Form extends Component {
         formData.append('company', this.state.company)
         formData.append('locations', this.state.locations)
 
+        console.log(formData)
+
         axios.post(`${BASE_URL}/api/v1/contacts/`, formData, {
             'Content-Type': 'multipart/form-data'
         })

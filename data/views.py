@@ -19,40 +19,41 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
 
     def create(self, request, *args, **kwargs):
         ## add new entry to csv file
-        if os.stat('data.csv').st_size > 0:
-            df = pd.read_csv('data.csv')
+        if os.stat('./data/data/data.csv').st_size > 0:
+            df = pd.read_csv('./data/data/data.csv')
             vals = list(request.data.values())
             
             if vals[2:3] not in df.values:
                 vals_dict = {
-                'first_name': vals[0:1], 
-                'last_name': vals[1:2],
-                'email': vals[2:3],
-                'company': vals[3:4],
-                '# of locations': vals[4:],
+                'first_name': str(vals[0:1]), 
+                'last_name': str(vals[1:2]),
+                'email': str(vals[2:3]),
+                'company': str(vals[3:4]),
+                '# of locations': str(vals[4:]),
                 }
                 new_df = pd.DataFrame(vals_dict)
-                new_df.to_csv('data.csv', mode='a', header=False)
+                new_df.to_csv('./data/data/data.csv', mode='a', header=False)
             else:
                 pass
-        elif os.stat('data.csv').st_size == 0:
+        elif os.stat('./data/data/data.csv').st_size == 0:
             vals = list(request.data.values())
             my_dict = {
-                'first_name': vals[0:1], 
-                'last_name': vals[1:2],
-                'email': vals[2:3],
-                'company': vals[3:4],
-                '# of locations': vals[4:],
+                'first_name': str(vals[0:1]), 
+                'last_name': str(vals[1:2]),
+                'email': str(vals[2:3]),
+                'company': str(vals[3:4]),
+                '# of locations': str(vals[4:]),
                 }
             df = pd.DataFrame(my_dict)
-            df.to_csv('data.csv',)
+            print(df)
+            df.to_csv('./data/data/data.csv',)
 
         # gauth = GoogleAuth()
         # gauth.LocalWebserverAuth() # Creates local webserver and auto handles authentication.
 
         gauth = GoogleAuth()
         # Try to load saved client credentials
-        gauth.LoadCredentialsFile("mycreds.txt")
+        gauth.LoadCredentialsFile("./data/data/mycreds.txt")
         if gauth.credentials is None:
             # Authenticate if they're not there
             gauth.LocalWebserverAuth()
@@ -63,7 +64,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
             # Initialize the saved creds
             gauth.Authorize()
         # Save the current credentials to a file
-        gauth.SaveCredentialsFile("mycreds.txt")
+        gauth.SaveCredentialsFile("./data/data/mycreds.txt")
 
         drive = GoogleDrive(gauth)
 
@@ -75,7 +76,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 fileID = file['id']
 
         file1 = drive.CreateFile({'id': fileID})
-        file1.SetContentFile('data.csv')
+        file1.SetContentFile('./data/data/data.csv')
         file1.Upload()
 
         return super().create(request, *args, **kwargs)
