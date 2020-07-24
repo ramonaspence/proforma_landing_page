@@ -16,7 +16,7 @@ class RightLanding extends Component {
                     this.props.scrollDiv.current.scrollIntoView({ 
                     behavior: 'smooth' });
                     }} 
-                        className='target-button'>Click here to get a free Questionnaire!
+                        className='target-button'>Click here to get your handy Checklist!
                     </button>
                 </div>
 

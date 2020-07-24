@@ -8,17 +8,13 @@ axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 
 const BASE_URL = process.env.REACT_APP_BASE_URL
-
+const AUTH_TOKEN = process.env.AUTH_TOKEN
 
 
 
 class Form extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            
-        }
 
         this.onClick = this.onClick.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -31,7 +27,6 @@ class Form extends Component {
     }
 
     onClick(e) {
-        // e.preventDefault();
         console.log(this.state);
         let formData = new FormData();
         formData.append('first_name', this.state.first_name)
@@ -43,7 +38,9 @@ class Form extends Component {
         console.log(formData)
 
         axios.post(`${BASE_URL}/api/v1/contacts/`, formData, {
-            'Content-Type': 'multipart/form-data'
+            // headers: {
+            //     'Authorization': `Token ${AUTH_TOKEN}`,
+            // }
         })
         .then(res => console.log(res))
         .catch(err => console.log(err))

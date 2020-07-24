@@ -1,7 +1,11 @@
 from rest_framework import generics, authentication
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import permission_classes, authentication_classes
 from .serializers import ContactSerializer
 from .models import Contact
 from django.conf import settings
+from django.contrib.auth.models import User
+from django.db import connection
 
 import pandas as pd
 import json
@@ -12,11 +16,12 @@ from pydrive.drive import GoogleDrive
 
 
 class ContactListCreateAPIView(generics.ListCreateAPIView):
-    authentication_classes = [authentication.TokenAuthentication, authentication.SessionAuthentication]
+    # authentication_classes = [authentication.TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
-
+    
     def create(self, request, *args, **kwargs):
         ## add new entry to csv file
         if os.stat('./data/data/data.csv').st_size > 0:
@@ -32,7 +37,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 '# of locations': str(vals[4:]),
                 }
                 new_df = pd.DataFrame(vals_dict)
-                new_df.to_csv('./data/data/data.csv', mode='a', header=False)
+                new_df.to_csv('./data/data/data.csv', mode='a', header=False, index=0)
             else:
                 pass
         elif os.stat('./data/data/data.csv').st_size == 0:
@@ -45,11 +50,8 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 '# of locations': str(vals[4:]),
                 }
             df = pd.DataFrame(my_dict)
-            print(df)
             df.to_csv('./data/data/data.csv',)
 
-        # gauth = GoogleAuth()
-        # gauth.LocalWebserverAuth() # Creates local webserver and auto handles authentication.
 
         gauth = GoogleAuth()
         # Try to load saved client credentials
@@ -70,13 +72,20 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
 
         # View all folders and file in your Google Drive
         fileList = drive.ListFile({'q': "'root' in parents and trashed=false"}).GetList()
-        for file in fileList:
-            # Get the ID that you want
-            if(file['title'] == "./data/data/data.csv"):
-                fileID = file['id']
-
-        file1 = drive.CreateFile({'id': fileID})
-        file1.SetContentFile('./data/data/data.csv')
-        file1.Upload()
+        
+        
+        if len(fileList) > 0:
+            for file in fileList:
+                # Get the ID that you want
+                if(file['title'] == "data.csv"):
+                    fileID = file['id']
+                    file1 = drive.CreateFile({'id': fileID})
+                    file1.SetContentFile('./data/data/data.csv')
+                    file1.Upload()
+        else:
+            file1 = drive.CreateFile({'title': 'contacts.csv'})
+            file1.SetContentFile('./data/data/data.csv')
+            file1.Upload()
 
         return super().create(request, *args, **kwargs)
+
