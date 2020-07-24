@@ -1,10 +1,9 @@
-from rest_framework import generics, authentication
-from rest_framework.permissions import IsAuthenticated
+from rest_framework import generics, authentication, permissions
 from rest_framework.decorators import permission_classes, authentication_classes
 from .serializers import ContactSerializer
 from .models import Contact
 from django.conf import settings
-from django.contrib.auth.models import User
+
 from django.db import connection
 
 import pandas as pd
@@ -17,7 +16,7 @@ from pydrive.drive import GoogleDrive
 
 class ContactListCreateAPIView(generics.ListCreateAPIView):
     # authentication_classes = [authentication.TokenAuthentication]
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
