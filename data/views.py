@@ -34,8 +34,8 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 'company': str(vals[3:4]),
                 '# of locations': str(vals[4:]),
                 }
-                new_df = pd.DataFrame(vals_dict)
-                new_df.to_csv('./data/data/data.csv', mode='a', header=False, index=0)
+                new_df = pd.DataFrame(vals_dict, index=[])
+                new_df.to_csv('./data/data/data.csv', mode='a', header=False)
             else:
                 pass
         elif os.stat('./data/data/data.csv').st_size == 0:
@@ -47,8 +47,8 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 'company': str(vals[3:4]),
                 '# of locations': str(vals[4:]),
                 }
-            df = pd.DataFrame(my_dict)
-            df.to_csv('./data/data/data.csv', index=0)
+            df = pd.DataFrame(my_dict, index=[])
+            df.to_csv('./data/data/data.csv', mode='w')
 
 
         gauth = GoogleAuth()
@@ -75,7 +75,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
         if len(fileList) > 0:
             for file in fileList:
                 # Get the ID that you want
-                if(file['title'] == "data.csv"):
+                if(file['title'] == "contacts.csv"):
                     fileID = file['id']
                     file1 = drive.CreateFile({'id': fileID})
                     file1.SetContentFile('./data/data/data.csv')
