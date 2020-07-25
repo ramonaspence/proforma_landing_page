@@ -5,14 +5,6 @@ import proforma_logo from '../static/media/proforma_logo.png'
 
 class Footer extends Component {
 
-// Rhino.Info@Proforma.com
-// Toll Free:  1-877-337-3347
-
-// Know your sales person?
-// Steve.Spence@Proforma.com or x501
-// Don.Oswalt@Proforma.com or x510
-
-
     render() {
         return(
             <div className="col-12 footer">

@@ -12,14 +12,13 @@ class RightLanding extends Component {
                 <div className="line-2"></div>
                 <div className="box-3"></div>
                 <div className="box-4">
-                <button onClick={() => {
-                    this.props.scrollDiv.current.scrollIntoView({ 
-                    behavior: 'smooth' });
-                    }} 
+                    <button onClick={() => {
+                        this.props.scrollDiv.current.scrollIntoView({behavior: 'smooth' });
+                            }
+                        } 
                         className='target-button'>Click here to get your handy Checklist!
                     </button>
                 </div>
-
             </div>
             </React.Fragment>
         )

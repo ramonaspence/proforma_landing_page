@@ -23,11 +23,9 @@ class Form extends Component {
     onChange(e) {
         e.preventDefault();
         this.setState({[e.target.name]: e.target.value})
-        console.log(this.state)
     }
 
     onClick(e) {
-        console.log(this.state);
         let formData = new FormData();
         formData.append('first_name', this.state.first_name)
         formData.append('last_name', this.state.last_name)

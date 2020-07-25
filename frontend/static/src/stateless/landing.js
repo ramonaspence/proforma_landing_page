@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import '../App.css'
 
-
 import MainLanding from './mainLanding.js';
 import RightLanding from './rightLanding.js';
 import Form from '../stateful/form';

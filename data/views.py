@@ -15,7 +15,6 @@ from pydrive.drive import GoogleDrive
 
 
 class ContactListCreateAPIView(generics.ListCreateAPIView):
-    # authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer

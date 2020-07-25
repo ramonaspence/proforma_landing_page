@@ -20,9 +20,6 @@ class MainLanding extends Component {
                     
                     <img className="prostores-img col-12" src={prostores} alt="" />
 
-                    
-                    
-
                     <h2 className="main-heading">PROFORMA PROSTORES</h2>
 
                     <h4 className="sub-heading">DON'T JUST TAKE OUR WORD FOR IT, CONSIDER THE COMPANY WE KEEP.</h4>
@@ -30,25 +27,25 @@ class MainLanding extends Component {
                     <h6 className="text">We've helped virtually every type of organization in North America</h6>
 
                     
-                        <div className="row col-12">
+                    <div className="row col-12">
                         <ul className="bullet col-6">
-                        <li className="points text">Education</li>
-                        <li className="points text">Entertainment</li>
-                        <li className="points text">Government</li>
-                        <li className="points text">Healthcare</li>
-                        <li className="points text">Hospitality</li>
-                        <li className="points text">Manufacturing</li>
+                            <li className="points text">Education</li>
+                            <li className="points text">Entertainment</li>
+                            <li className="points text">Government</li>
+                            <li className="points text">Healthcare</li>
+                            <li className="points text">Hospitality</li>
+                            <li className="points text">Manufacturing</li>
                         </ul>
 
                         <ul className="col-6">
-                        <li className="points text">Non-profit</li>
-                        <li className="points text">Pharmaceutical</li>
-                        <li className="points text">Restaurants</li>
-                        <li className="points text">Retail</li>
-                        <li className="points text">Technology</li>
-                        <li className="points text">Transportation</li>
-                        <li className="points text">and more!</li>
-                    </ul>
+                            <li className="points text">Non-profit</li>
+                            <li className="points text">Pharmaceutical</li>
+                            <li className="points text">Restaurants</li>
+                            <li className="points text">Retail</li>
+                            <li className="points text">Technology</li>
+                            <li className="points text">Transportation</li>
+                            <li className="points text">and more!</li>
+                        </ul>
                     </div>
 
                     <h6 className="text">...and we have the proven ability to help you every step of the way!</h6>
@@ -143,12 +140,6 @@ class MainLanding extends Component {
                     <p className="sub-heading">These are just a few of the benefits and cost-savings you and your organization will enjoy with our powerful technology platform.</p>
                     </div>
                 </div>
-
-               
-
-                <footer className="footer col-12">
-                    <img src="" alt="" />
-                </footer>
             </React.Fragment>
         )
     }
