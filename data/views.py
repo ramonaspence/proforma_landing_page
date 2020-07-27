@@ -70,18 +70,17 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
 
         # View all folders and file in your Google Drive
         fileList = drive.ListFile({'q': "'root' in parents and trashed=false"}).GetList()
-        
-        
+
         if len(fileList) > 0:
             for file in fileList:
                 # Get the ID that you want
-                if(file['title'] == "contacts.csv"):
+                if(file['title'] == "contacts"):
                     fileID = file['id']
                     file1 = drive.CreateFile({'id': fileID})
                     file1.SetContentFile('./data/data/data.csv')
                     file1.Upload()
         else:
-            file1 = drive.CreateFile({'title': 'contacts.csv'})
+            file1 = drive.CreateFile({'title': 'contacts'})
             file1.SetContentFile('./data/data/data.csv')
             file1.Upload()
 
