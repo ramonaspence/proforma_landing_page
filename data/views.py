@@ -34,7 +34,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 'company': str(vals[3:4]),
                 '# of locations': str(vals[4:]),
                 }
-                new_df = pd.DataFrame(vals_dict, index=[])
+                new_df = pd.DataFrame(vals_dict, index=[0])
                 new_df.to_csv('./data/data/data.csv', mode='a', header=False)
             else:
                 pass
@@ -47,7 +47,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 'company': str(vals[3:4]),
                 '# of locations': str(vals[4:]),
                 }
-            df = pd.DataFrame(my_dict, index=[])
+            df = pd.DataFrame(my_dict, index=[0])
             df.to_csv('./data/data/data.csv', mode='w')
 
 
