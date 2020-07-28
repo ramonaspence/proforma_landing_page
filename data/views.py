@@ -25,16 +25,25 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
         if os.stat('./data/data/data.csv').st_size > 0:
             df = pd.read_csv('./data/data/data.csv')
             vals = list(request.data.values())
-            
             if vals[2:3] not in df.values:
+                vals_list = [
+                    vals[0:1],
+                    vals[1:2],
+                    vals[2:3],
+                    vals[3:4],
+                    vals[4:],
+                ]
+                print(vals)
                 vals_dict = {
-                'first_name': str(vals[0:1]), 
-                'last_name': str(vals[1:2]),
-                'email': str(vals[2:3]),
-                'company': str(vals[3:4]),
-                '# of locations': str(vals[4:]),
+                'first_name': str(vals[0:1])[2:-2], 
+                'last_name': str(vals[1:2])[2:-2],
+                'email': str(vals[2:3])[2:-2],
+                'company': str(vals[3:4])[2:-2],
+                '# of locations': str(vals[4:])[2:-2],
                 }
-                new_df = pd.DataFrame(vals_dict, index=[0])
+                print(vals_dict)
+                new_df = pd.DataFrame(data = [vals_dict])
+                # new_df = pd.Dataframe.from_dict(vals_dict, index=)
                 new_df.to_csv('./data/data/data.csv', mode='a', header=False)
             else:
                 pass
