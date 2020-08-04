@@ -14,6 +14,8 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 
 
+DRIVE_AUTH = settings.GOOGLE_DRIVE_AUTHENTICATION
+
 class ContactListCreateAPIView(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
     queryset = Contact.objects.all()
@@ -33,7 +35,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                     vals[3:4],
                     vals[4:],
                 ]
-                print(vals)
+
                 vals_dict = {
                 'first_name': str(vals[0:1])[2:-2], 
                 'last_name': str(vals[1:2])[2:-2],
@@ -41,7 +43,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 'company': str(vals[3:4])[2:-2],
                 '# of locations': str(vals[4:])[2:-2],
                 }
-                print(vals_dict)
+
                 new_df = pd.DataFrame(data = [vals_dict])
                 # new_df = pd.Dataframe.from_dict(vals_dict, index=)
                 new_df.to_csv('./data/data/data.csv', mode='a', header=False)
@@ -60,9 +62,9 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
             df.to_csv('./data/data/data.csv', mode='w')
 
 
-        gauth = GoogleAuth()
+        gauth = GoogleAuth(settings_file='settings.yaml')
         # Try to load saved client credentials
-        gauth.LoadCredentialsFile("./data/data/mycreds.txt")
+        gauth.LoadCredentials(DRIVE_AUTH)
         if gauth.credentials is None:
             # Authenticate if they're not there
             gauth.LocalWebserverAuth()
