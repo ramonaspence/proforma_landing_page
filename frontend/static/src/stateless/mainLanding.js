@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../App.css'
 
 
-import prostores from '../static/media/prostores.png'
+import prostores from '../static/media/prostore.jpg'
 import pc from '../static/media/pc.png'
 import icon_1 from '../static/media/icon_1.png'
 import icon_2 from '../static/media/icon_2.png'
