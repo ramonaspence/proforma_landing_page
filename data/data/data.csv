@@ -1,6 +1,5 @@
 ,first_name,last_name,email,company,# of locations
 0,Ramona,Spence,ramonaejspence@gmail.com,Starbucks,1
-0,['joe'],['shmoe'],['joeshmoe@example.com'],['Starbucks'],['1']
-0,['Ramona'],['Spence'],['ramonaejspence@example.com'],['Starbucks'],['1']
-0,['jane'],['doe'],['jane223@example.com'],['asd;ckm'],['2']
-0,['Steve'],['Spence'],['steve.spence@proforma.com'],['Proforma Rhino Graphics'],['2']
+
+0,Steve,Spence,steve.spence@proforma.com,Proforma Rhino Graphics,2
+0,Sharon,Spence,sharon.spence@proforma.com,Proforma Rhino Graphics,2
