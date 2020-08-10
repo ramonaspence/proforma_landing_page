@@ -72,10 +72,13 @@ class MainLanding extends Component {
                     <h4 className="sub-heading">MANAGING YOUR ECOMMERCE PROGRAM HAS NEVER BEEN EASIER</h4>
                     <p className="text">We are pleased to introduce our new proprietary technology platform that can help you easily drive bottom line efficiencies and save your organization time, money and resources.</p>
                     
-
-                    <div className="features col-12">
-
-                    <h5 className="sub-heading">SOME OF OUR PROVEN FEATURES AND BENEFITS INCLUDE:</h5>
+                    <button type='button' data-toggle="collapse" data-target="#features" className="features-button sub-heading btn-primary">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i> 
+                            SEE SOME OF OUR PROVEN FEATURES AND BENEFITS 
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </button>
+                    
+                    <div id="features" className="features col-12 collapse">
 
                     <div className="icon-wrap">
                     <img className="icons" src={icon_1} alt="" />
