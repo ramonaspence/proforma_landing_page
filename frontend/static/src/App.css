@@ -276,15 +276,13 @@ button:focus {
   margin-bottom: 2rem;
   color: black;
   padding: 1rem .5;
-  background: linear-gradient(to bottom, rgba(212,142,74,1) 0%,rgba(250,229,206,1) 0%,rgba(246,195,143,1) 7%,rgba(242,166,90,1) 60%,rgba(238,145,58,1) 100%);
-  border: 1px #C97930 solid;
+  background: linear-gradient(to bottom, rgba(237,161,55,1) 0%,rgba(253,234,205,1) 0%,rgba(251,206,143,1) 7%,rgba(250,182,88,1) 60%,rgba(248,164,54,1) 100%);  border: 1px #C97930 solid;
 }
 
 .download:hover {
   margin-top: 2rem;
   color: black;
-  background: linear-gradient(to bottom, rgba(212,142,74,1) 0%,rgba(249,229,207,1) 0%,rgba(246,195,143,1) 7%,rgba(239,154,69,1) 60%,rgba(237,129,28,1) 100%);
-}
+  background: linear-gradient(to bottom, rgba(212,132,20,1) 0%,rgba(249,198,121,1) 0%,rgba(249,173,67,1) 7%,rgba(247,153,21,1) 60%,rgba(232,135,8,1) 100%);}
 
 .download i {
   color: white;
