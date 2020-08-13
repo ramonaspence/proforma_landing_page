@@ -18,8 +18,9 @@ class Main extends Component {
             <React.Fragment>
                 <div className="company col-12">
 
-                    <h3 className="sub-heading top-heading">
-                    Wonder if an online company store is right for your business? Get your free checklist and find out
+                    <h3 className="main-heading top-heading">
+                    Wonder if an online company store is right for your business? 
+                    <br />Get your free checklist and find out
                     </h3>
 
                     <div className="free-checklist-one">
