@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import '../App.css'
 
-class RightLanding extends Component {
+class Side extends Component {
 
     render() {
         return(
@@ -24,4 +24,4 @@ class RightLanding extends Component {
         )
     }
 }
-export default RightLanding
+export default Side
