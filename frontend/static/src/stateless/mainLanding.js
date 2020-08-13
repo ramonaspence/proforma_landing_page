@@ -17,6 +17,33 @@ class MainLanding extends Component {
         return(
             <React.Fragment>
                 <div className="company col-12">
+
+                    <h3 className="sub-heading top-heading">
+                    Wonder if an online company store is right for your business? Get your free checklist and find out
+                    </h3>
+
+                    <div className="free-checklist-one">
+                        <h2 className="sub-heading">Get Our Free Checklist!</h2>
+
+                            <p className="text">Maybe you've heard some positive things about online stores, but you're not sure if having an
+                            online store is right for your business. 
+                                <br />
+                                <br />
+                            Get our Handy checklist, which walks you through five important areas to carefully consider including:
+                            </p>
+                            
+                            <ul>
+                                <li className="form-ul">Number of locations</li>
+                                <li className="form-ul">Revenue</li>
+                                <li className="form-ul">Company growth</li>
+                                <li className="form-ul">Brand consistency</li>
+                                <li className="form-ul">Labor and workflow costs</li>
+                            </ul>
+
+                            <p className='text'>
+                                More than a simple "list," we discuss each criteria to give you a clearer context and deeper understanding of how an online company store might affect your business.
+                            </p>
+                    </div>
                     
                     <img className="prostores-img col-12" src={prostores} alt="" />
 
