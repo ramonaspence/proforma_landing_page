@@ -10,27 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-import json
-from django.core.exceptions import ImproperlyConfigured
-
 import os
 import dj_database_url ##lets you hook up to heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-with open(os.path.join(BASE_DIR, 'client_secrets.json')) as goauth_file:
-    secrets = json.load(goauth_file)
-
-def get_goath(settings, secrets=secrets):
-    """Get Google Authentication Credentials 
-    or throw Improperly Configured exception
-    """
-    try:
-        return secrets[settings]
-    except KeyError:
-        raise ImproperlyConfigured("set the {} setting".format(settings))
-
-GOOGLE_AUTH_CREDENTIALS = get_gaoth('GOOGLE_AUTH')
 
 
 # Quick-start development settings - unsuitable for production
