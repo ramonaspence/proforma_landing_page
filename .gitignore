@@ -3,4 +3,4 @@
 db.sqlite3
 .vscode
 __pychache__/
-client_secrets.json
+./client_secrets.json
