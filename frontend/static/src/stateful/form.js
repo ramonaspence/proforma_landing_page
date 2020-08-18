@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../App.css'
 import axios from 'axios';
 
-import pdf from '../static/media/questionnaire.pdf'
+import pdf from '../static/media/checklist.pdf'
 
 axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';
@@ -57,15 +57,15 @@ class Form extends Component {
                         </p>
                         
                         <ul>
-                            <li>Number of locations</li>
-                            <li>Revenue</li>
-                            <li>Company growth</li>
-                            <li>Brand consistency</li>
-                            <li>Labor and workflow costs</li>
+                            <li className="form-ul">Number of locations</li>
+                            <li className="form-ul">Revenue</li>
+                            <li className="form-ul">Company growth</li>
+                            <li className="form-ul">Brand consistency</li>
+                            <li className="form-ul">Labor and workflow costs</li>
                         </ul>
 
                         <p className='text'>
-                            More than a simple "list," we discuss each criteria to give you a clearer context and deeper understanding of how an online company store might affect your buesiness.
+                            More than a simple "list," we discuss each criteria to give you a clearer context and deeper understanding of how an online company store might affect your business.
                             <br />
                             <br />
                             Fill out the form to get your checklist!
@@ -74,6 +74,10 @@ class Form extends Component {
                 </div>
                 <div className="form-box-2 col-5">
                     <form className="form col-12" action={pdf} target="_blank" type='submit'>
+                        <h5 className="main-heading">The Reward of Streamlining Processes: <br />
+                            Reduced Labor and Marketing Costs
+                        </h5>
+
                         <label htmlFor="first_name">First Name</label>
                         <input required={true} onChange={this.onChange} className="form-control" type="text" name="first_name" id="first_name" />
 
@@ -89,7 +93,9 @@ class Form extends Component {
                         <label htmlFor="locations">Number of Locations</label>
                         <input required={true} onChange={this.onChange} className="form-control" type="number" name="locations" id="locations" />
 
-                        <button onClick={this.onClick} className="download btn">Download Free Checklist</button>
+                        <button onClick={this.onClick} className="download btn"><i className="fa fa-play"></i>Download Free Checklist</button>
+
+                        <h5 className="main-heading">TOGETHER WITH PROFORMA, THE BOTTOM LINE IS TO IMPROVE YOUR BOTTOM LINE</h5>
 
                     </form>
                 </div>

@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
 import '../App.css'
 
-import MainLanding from './mainLanding.js';
-import RightLanding from './rightLanding.js';
+import Main from './main.js';
+import Side from './scrollButton.js';
 import Form from '../stateful/form';
 import Footer from './footer.js';
 
 class Landing extends Component {
     constructor() {
         super();
-    
     
     this.scrollDiv = React.createRef();
         
@@ -21,11 +20,11 @@ class Landing extends Component {
                 <div className="row">
 
                     <div className="col-9 prostores">
-                        <MainLanding />
+                        <Main />
                     </div>
 
                     <div className="col-3 images">
-                        <RightLanding scrollDiv={this.scrollDiv}/>
+                        <Side scrollDiv={this.scrollDiv}/>
                     </div>
 
                 </div>
