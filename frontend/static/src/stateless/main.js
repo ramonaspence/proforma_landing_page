@@ -24,7 +24,7 @@ class Main extends Component {
                     </h3>
 
                     <div className="free-checklist-one">
-                        <h4 className="sub-heading">Get Our Free Checklist!</h4>
+                        <h2 className="sub-heading">Get Our Free Checklist!</h2>
 
                             <p className="text">Maybe you've heard some positive things about online stores, but you're not sure if having an
                             online store is right for your business. 
