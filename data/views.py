@@ -14,6 +14,7 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 
 
+
 class ContactListCreateAPIView(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
     queryset = Contact.objects.all()
@@ -33,7 +34,6 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                     vals[3:4],
                     vals[4:],
                 ]
-                print(vals)
                 vals_dict = {
                 'first_name': str(vals[0:1])[2:-2], 
                 'last_name': str(vals[1:2])[2:-2],
@@ -41,9 +41,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
                 'company': str(vals[3:4])[2:-2],
                 '# of locations': str(vals[4:])[2:-2],
                 }
-                print(vals_dict)
                 new_df = pd.DataFrame(data = [vals_dict])
-                # new_df = pd.Dataframe.from_dict(vals_dict, index=)
                 new_df.to_csv('./data/data/data.csv', mode='a', header=False)
             else:
                 pass
@@ -62,7 +60,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
 
         gauth = GoogleAuth()
         # Try to load saved client credentials
-        gauth.LoadCredentialsFile("./data/data/mycreds.txt")
+        gauth.LoadCredentialsFile("client_secrets.json")
         if gauth.credentials is None:
             # Authenticate if they're not there
             gauth.LocalWebserverAuth()
@@ -73,7 +71,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
             # Initialize the saved creds
             gauth.Authorize()
         # Save the current credentials to a file
-        gauth.SaveCredentialsFile("./data/data/mycreds.txt")
+        gauth.SaveCredentialsFile("client_secrets.json")
 
         drive = GoogleDrive(gauth)
 
