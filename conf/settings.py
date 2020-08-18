@@ -16,9 +16,6 @@ import dj_database_url ##lets you hook up to heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-GOOGLE_AUTH_CREDENTIALS = os.environ['GOOGLE_AUTH_CREDENTIALS']
-
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -27,7 +24,7 @@ GOOGLE_AUTH_CREDENTIALS = os.environ['GOOGLE_AUTH_CREDENTIALS']
 SECRET_KEY = 'f)j+d@k!*^=(wdoi-9h*e*!)^=n^&l=#u6w8v)@*cn!ooml#pe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',

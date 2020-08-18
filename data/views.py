@@ -13,7 +13,6 @@ import os
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 
-creds = json.loads(settings.GOOGLE_AUTH_CREDENTIALS)
 
 class ContactListCreateAPIView(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -60,7 +59,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
 
         gauth = GoogleAuth()
         # Try to load saved client credentials
-        gauth.LoadCredentialsFile(creds)
+        gauth.LoadCredentialsFile("client_secrets.json")
         if gauth.credentials is None:
             # Authenticate if they're not there
             gauth.LocalWebserverAuth()
@@ -71,7 +70,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
             # Initialize the saved creds
             gauth.Authorize()
         # Save the current credentials to a file
-        gauth.SaveCredentialsFile(creds)
+        gauth.SaveCredentialsFile("client_secrets.json")
 
         drive = GoogleDrive(gauth)
 
