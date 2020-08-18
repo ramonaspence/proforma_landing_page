@@ -10,25 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-import json
-from django.core.exceptions import ImproperlyConfigured # Usually importing from django in settings is a no-no, however ImproperlyConfigured is one exception.
 
 import os
 import dj_database_url ##lets you hook up to heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# with open(os.path.join(BASE_DIR, 'client_secrets.json')) as goath_file:
-#     secrets = json.load(goath_file)
-
-# def get_secret(setting, secrets=secrets):
-#     """Get secret setting or fail with ImproperlyConfigured"""
-#     try:
-#         return secrets[setting]
-#     except KeyError:
-#         raise ImproperlyConfigured("Set the {} setting".format(setting))
-
-# GOOGLE_AUTH_CREDENTIALS = get_secret('GOOGLE_AUTH_CREDENTIALS')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -37,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f)j+d@k!*^=(wdoi-9h*e*!)^=n^&l=#u6w8v)@*cn!ooml#pe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
