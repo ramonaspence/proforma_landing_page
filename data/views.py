@@ -58,7 +58,7 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
 
 
         gauth = GoogleAuth()
-        # Try to load saved client credentials
+        # Try to load saved client credential
         gauth.LoadCredentialsFile("client_secrets.json")
         if gauth.credentials is None:
             # Authenticate if they're not there
