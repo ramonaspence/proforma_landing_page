@@ -97,9 +97,9 @@ class Main extends Component {
                 <div className="prostores col-12">
                     
                     <button type='button' data-toggle="collapse" data-target="#features" className="features-button sub-heading btn-primary">
-                        <i class="fa fa-caret-down" aria-hidden="true"></i> 
+                        <i className="fa fa-caret-down" aria-hidden="true"></i> 
                             SEE SOME OF OUR PROVEN FEATURES AND BENEFITS 
-                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <i className="fa fa-caret-down" aria-hidden="true"></i>
                     </button>
                     
                     <div id="features" className="features col-12 collapse">
