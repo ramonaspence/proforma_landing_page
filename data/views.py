@@ -14,7 +14,6 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 
 
-
 class ContactListCreateAPIView(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
     queryset = Contact.objects.all()
