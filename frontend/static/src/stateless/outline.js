@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../App.css'
 
 import Main from './main.js';
-import Side from './scrollButton.js';
+import Side from './side.js';
 import Form from '../stateful/form';
 import Footer from './footer.js';
 
@@ -19,18 +19,14 @@ class Landing extends Component {
             <div className="container-fluid main">
                 <div className="row">
 
-                    <div className="col-9 prostores">
-                        <Main />
+                    <div className="col prostores">
+                        <Main scrollDiv={this.scrollDiv}/>
                     </div>
 
-                    <div className="col-3 images">
+                    <div className="col side">
                         <Side scrollDiv={this.scrollDiv}/>
                     </div>
 
-                </div>
-
-                <div className="row">
-                    <Form scrollDiv={this.scrollDiv} />
                 </div>
 
                 <div className="row">

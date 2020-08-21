@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.b9129efc.chunk.css",
-    "main.js": "/static/js/main.12d89b65.chunk.js",
-    "main.js.map": "/static/js/main.12d89b65.chunk.js.map",
+    "main.css": "/static/css/main.de70fce5.chunk.css",
+    "main.js": "/static/js/main.df32dc1d.chunk.js",
+    "main.js.map": "/static/js/main.df32dc1d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.34b54e52.js",
     "runtime-main.js.map": "/static/js/runtime-main.34b54e52.js.map",
-    "static/js/2.9455e467.chunk.js": "/static/js/2.9455e467.chunk.js",
-    "static/js/2.9455e467.chunk.js.map": "/static/js/2.9455e467.chunk.js.map",
+    "static/js/2.c30984d7.chunk.js": "/static/js/2.c30984d7.chunk.js",
+    "static/js/2.c30984d7.chunk.js.map": "/static/js/2.c30984d7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.dfe18cf1ac15be16b59be45b8af5ea41.js": "/precache-manifest.dfe18cf1ac15be16b59be45b8af5ea41.js",
+    "precache-manifest.9c148eafd6757ab37da66a1860f97d44.js": "/precache-manifest.9c148eafd6757ab37da66a1860f97d44.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.b9129efc.chunk.css.map": "/static/css/main.b9129efc.chunk.css.map",
-    "static/js/2.9455e467.chunk.js.LICENSE.txt": "/static/js/2.9455e467.chunk.js.LICENSE.txt",
+    "static/css/main.de70fce5.chunk.css.map": "/static/css/main.de70fce5.chunk.css.map",
+    "static/js/2.c30984d7.chunk.js.LICENSE.txt": "/static/js/2.c30984d7.chunk.js.LICENSE.txt",
     "static/media/Gobold_Bold.ttf": "/static/media/Gobold_Bold.90fca1a9.ttf",
     "static/media/MinionPro-Regular.otf": "/static/media/MinionPro-Regular.38711b5b.otf",
     "static/media/Univers-Bold.otf": "/static/media/Univers-Bold.5da62e29.otf",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.34b54e52.js",
-    "static/js/2.9455e467.chunk.js",
-    "static/css/main.b9129efc.chunk.css",
-    "static/js/main.12d89b65.chunk.js"
+    "static/js/2.c30984d7.chunk.js",
+    "static/css/main.de70fce5.chunk.css",
+    "static/js/main.df32dc1d.chunk.js"
   ]
 }
