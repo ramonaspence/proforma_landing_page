@@ -3,7 +3,7 @@ import '../App.css'
 
 import Main from './main.js';
 import Side from './side.js';
-import Form from '../stateful/form';
+import Dropdown from './dropdown.js';
 import Footer from './footer.js';
 
 class Landing extends Component {
@@ -20,13 +20,20 @@ class Landing extends Component {
                 <div className="row">
 
                     <div className="col prostores">
+            
                         <Main scrollDiv={this.scrollDiv}/>
                     </div>
+
+                    
 
                     <div className="col side">
                         <Side scrollDiv={this.scrollDiv}/>
                     </div>
 
+                </div>
+
+                <div className="col drop-down">
+                        <Dropdown scrollDiv={this.scrollDiv}/>
                 </div>
 
                 <div className="row">

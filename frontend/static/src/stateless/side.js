@@ -15,6 +15,9 @@ class Side extends Component {
             <div className="col-12">
                 <Image />
             </div>
+            <div className="col-12">
+          
+            </div>
             </React.Fragment>
         )
     }
