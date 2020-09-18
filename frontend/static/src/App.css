@@ -101,6 +101,14 @@ img {
 
  /* dropdown start */
 
+.drop-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
 .features-button {
   width: 100%;
   font-family: 'Univers';
@@ -167,10 +175,14 @@ button:focus {
 
 .dropdown-content {
   display: flex;
-  margin-bottom: 4rem;
-  width: 60vw;
+  margin: 2rem 3rem 6rem 3rem;
+  width: 100%;
+  height: 5rem;
 }
 
+.feature-items {
+  width: 60vw;
+}
 
 .features {
   margin-top: 3rem;
@@ -196,13 +208,11 @@ button:focus {
   margin-bottom: 0rem;
 }
 
-  /* form starts */
+
 
 .target-button {
   width: 80%;
   margin: .75rem;
-  transform-origin: center;
-  transform: translateX(12rem);
   color: black;
   font-size: 2rem;
   font-weight: bolder;
@@ -224,7 +234,7 @@ button:focus {
   border: 1px #C97930 solid;
   outline: none;
 }
-
+  /* form starts */
 
 .form-block {
   display: inline-block;
