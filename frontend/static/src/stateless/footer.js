@@ -9,11 +9,11 @@ class Footer extends Component {
         return(
             <div className="col-12 footer">
 
-                <div className="footer-logo col-4">
+                <div className="footer-logo">
                     <img className="logo" src={proforma_logo} alt="" />
                 </div>
 
-                <div className="contact-info col-8">
+                <div className="contact-info">
 
                     <div className="contact-left col">
                         <h6 className="footer-text">Rhino.Info@Proforma.com</h6><br />

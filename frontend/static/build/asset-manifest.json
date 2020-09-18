@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.8eadeb55.chunk.css",
-    "main.js": "/static/js/main.08dbd2c7.chunk.js",
-    "main.js.map": "/static/js/main.08dbd2c7.chunk.js.map",
+    "main.css": "/static/css/main.23a93eff.chunk.css",
+    "main.js": "/static/js/main.0298ebf6.chunk.js",
+    "main.js.map": "/static/js/main.0298ebf6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.34b54e52.js",
     "runtime-main.js.map": "/static/js/runtime-main.34b54e52.js.map",
     "static/js/2.c30984d7.chunk.js": "/static/js/2.c30984d7.chunk.js",
     "static/js/2.c30984d7.chunk.js.map": "/static/js/2.c30984d7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.36492a5ca93b7fb45facc8ac03f70f85.js": "/precache-manifest.36492a5ca93b7fb45facc8ac03f70f85.js",
+    "precache-manifest.0028c1716a056ef312f420fbf04a736f.js": "/precache-manifest.0028c1716a056ef312f420fbf04a736f.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.8eadeb55.chunk.css.map": "/static/css/main.8eadeb55.chunk.css.map",
+    "static/css/main.23a93eff.chunk.css.map": "/static/css/main.23a93eff.chunk.css.map",
     "static/js/2.c30984d7.chunk.js.LICENSE.txt": "/static/js/2.c30984d7.chunk.js.LICENSE.txt",
     "static/media/Gobold_Bold.ttf": "/static/media/Gobold_Bold.90fca1a9.ttf",
     "static/media/MinionPro-Regular.otf": "/static/media/MinionPro-Regular.38711b5b.otf",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.34b54e52.js",
     "static/js/2.c30984d7.chunk.js",
-    "static/css/main.8eadeb55.chunk.css",
-    "static/js/main.08dbd2c7.chunk.js"
+    "static/css/main.23a93eff.chunk.css",
+    "static/js/main.0298ebf6.chunk.js"
   ]
 }
