@@ -93,9 +93,7 @@ class Main extends Component {
                     
                 </div>
                 
-                <div className="col-12 drop-down">
-                    <Dropdown scrollDiv={this.props.scrollDiv}/>
-                </div>
+               
                
             </React.Fragment>
         )
