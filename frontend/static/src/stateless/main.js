@@ -17,7 +17,7 @@ class Main extends Component {
     render() {
         return(
             <React.Fragment>
-                <div className="company col-xl-12 col">
+                <div className="company col-12">
 
                     <h3 className="main-heading top-heading">
                     Wonder if an online company store is right for your business? 

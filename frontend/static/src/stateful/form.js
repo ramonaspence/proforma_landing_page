@@ -45,9 +45,9 @@ class Form extends Component {
 
     render() {
         return(
-            <div ref={this.props.scrollDiv} className="form-block">
+            <div ref={this.props.scrollDiv} className="form-block col-12">
 
-                <div className="form-box-2 col-12">
+                {/* <div className="form-box-2 col-12"> */}
                     <form className="form" action={pdf} target="_blank" type='submit'>
                         <h5 className="main-heading">The Reward of Streamlining Processes: <br />
                             Reduced Labor and Marketing Costs
@@ -74,7 +74,7 @@ class Form extends Component {
 
                     </form>
                 </div>
-            </div>
+            // </div>
 
         )
     }

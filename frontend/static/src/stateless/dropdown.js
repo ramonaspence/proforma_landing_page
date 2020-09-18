@@ -13,7 +13,6 @@ class Dropdown extends Component {
     render() {
         return(
             <React.Fragment>
-            {/* <div className="col-12 d-flex justify-content-start"> */}
                 <div className="prostores col-12">
                     <div className="drop-buttons col-12">   
                         <button type='button' data-toggle="collapse" data-target="#features" className="features-button sub-heading btn-primary">
@@ -21,16 +20,7 @@ class Dropdown extends Component {
                                 SEE SOME OF OUR PROVEN FEATURES AND BENEFITS 
                             <i className="fa fa-caret-down" aria-hidden="true"></i>
                         </button>
-                        
-                        <button onClick={() => {
-                            this.props.scrollDiv.current.scrollIntoView({
-                                behavior: 'smooth'}
-                                );
-                            }
-                        } 
-                            className='target-button'>
-                                Click here to get your handy Checklist!
-                        </button>
+                   
                     </div> 
                     <div id="features" className="features col-10 collapse">
                         
@@ -121,8 +111,8 @@ class Dropdown extends Component {
                 </div>
 
 
-
-        <div className="col-md-12 col">
+        
+        <div className="col-12 target-button-div">
          <button onClick={() => {
              this.props.scrollDiv.current.scrollIntoView({
                  behavior: 'smooth'}
