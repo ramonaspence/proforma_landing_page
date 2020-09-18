@@ -163,6 +163,16 @@ button:focus {
   color: black;
 }
 
+@media(max-width: 1024px) {
+  .drop-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: middle;
+  
+  }
+}
+
 .dropdown-content {
   display: flex;
   margin: 2rem 3rem 6rem 3rem;

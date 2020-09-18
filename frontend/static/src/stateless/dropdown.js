@@ -121,10 +121,18 @@ class Dropdown extends Component {
                 </div>
 
 
-            {/* <div className="col">
-            
-            </div> */}
-         {/* </div> */}
+
+        <div className="col-md-12 col">
+         <button onClick={() => {
+             this.props.scrollDiv.current.scrollIntoView({
+                 behavior: 'smooth'}
+                     );
+                 }
+             } 
+             className='target-button'>Click here to get your handy Checklist!
+         </button>
+         </div>
+
          </React.Fragment>
         )
     }

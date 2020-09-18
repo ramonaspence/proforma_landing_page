@@ -57,9 +57,12 @@ class ContactListCreateAPIView(generics.ListCreateAPIView):
             df.to_csv('./data/data/data.csv', mode='w')
 
 
+        with open('./data/data/secrets.txt', 'w+') as secrets_file:
+            
+
         gauth = GoogleAuth()
         # Try to load saved client credential
-        gauth.LoadCredentialsFile("client_secrets.json")
+        # gauth.LoadCredentialsFile("client_secrets.json")
         if gauth.credentials is None:
             # Authenticate if they're not there
             gauth.LocalWebserverAuth()
