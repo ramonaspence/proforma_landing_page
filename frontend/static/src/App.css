@@ -10,6 +10,7 @@ body {
 
 .side {
   height: fit-content;
+  padding-left: 4rem;
 }
 
  /* text styles */
@@ -90,6 +91,8 @@ img {
   height: fit-content;
   margin-left: 0;
   margin-right: 0;
+  padding-right: 5rem;
+  
 
 }
 
@@ -162,6 +165,10 @@ button:focus {
     justify-content: space-between;
     align-items: middle;
   
+  }
+
+  .target-button {
+    display: hidden;
   }
 }
 
