@@ -45,35 +45,10 @@ class Form extends Component {
 
     render() {
         return(
-            <div ref={this.props.scrollDiv} className="col-12 form-block">
-                {/* <div className="form-box col-7">
-                    <h2 className="sub-heading">Get Our Free Checklist!</h2>
+            <div ref={this.props.scrollDiv} className="form-block">
 
-                        <p className="text">Maybe you've heard some positive things about online stores, but you're not sure if having an
-                        online store is right for your business. 
-                        <br />
-                        <br />
-                        Get our Handy checklist, which walks you through five important areas to carefully consider including:
-                        </p>
-                        
-                        <ul>
-                            <li className="form-ul">Number of locations</li>
-                            <li className="form-ul">Revenue</li>
-                            <li className="form-ul">Company growth</li>
-                            <li className="form-ul">Brand consistency</li>
-                            <li className="form-ul">Labor and workflow costs</li>
-                        </ul>
-
-                        <p className='text'>
-                            More than a simple "list," we discuss each criteria to give you a clearer context and deeper understanding of how an online company store might affect your business.
-                            <br />
-                            <br />
-                            Fill out the form to get your checklist!
-                        </p>
-
-                </div> */}
                 <div className="form-box-2 col-12">
-                    <form className="form col-12" action={pdf} target="_blank" type='submit'>
+                    <form className="form" action={pdf} target="_blank" type='submit'>
                         <h5 className="main-heading">The Reward of Streamlining Processes: <br />
                             Reduced Labor and Marketing Costs
                         </h5>

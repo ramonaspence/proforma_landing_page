@@ -111,7 +111,7 @@ class Dropdown extends Component {
         </div>
 
 
-        <div className="col-8">
+        <div className="col-md-12 col">
          <button onClick={() => {
              this.props.scrollDiv.current.scrollIntoView({
                  behavior: 'smooth'}

@@ -17,7 +17,7 @@ class Main extends Component {
     render() {
         return(
             <React.Fragment>
-                <div className="company col-12">
+                <div className="company col-xl-12 col">
 
                     <h3 className="main-heading top-heading">
                     Wonder if an online company store is right for your business? 
@@ -46,7 +46,8 @@ class Main extends Component {
                                 More than a simple "list," we discuss each criteria to give you a clearer context and deeper understanding of how an online company store might affect your business.
                             </p>
                     </div>
-                    
+                </div>
+                <div className="col-xl-12 col">
                         <img className="prostores-img col-12" src={prostores} alt="" />
 
                     <h2 className="main-heading">PROFORMA PROSTORES</h2>
@@ -56,8 +57,8 @@ class Main extends Component {
                     <h6 className="text">We've helped virtually every type of organization in North America</h6>
 
                     
-                    <div className="row col-12">
-                        <ul className="bullet col-6">
+                    <div className="row">
+                        <ul className="bullet col">
                             <li className="points text">Education</li>
                             <li className="points text">Entertainment</li>
                             <li className="points text">Government</li>
@@ -66,7 +67,7 @@ class Main extends Component {
                             <li className="points text">Manufacturing</li>
                         </ul>
 
-                        <ul className="col-6">
+                        <ul className="bullet col">
                             <li className="points text">Non-profit</li>
                             <li className="points text">Pharmaceutical</li>
                             <li className="points text">Restaurants</li>

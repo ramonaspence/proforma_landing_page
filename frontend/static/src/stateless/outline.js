@@ -19,11 +19,11 @@ class Landing extends Component {
             <div className="container-fluid main">
                 <div className="row">
 
-                    <div className="col prostores">
+                    <div className="col-xl-6 col-12 prostores">
                         <Main scrollDiv={this.scrollDiv}/>
                     </div>
 
-                    <div className="col side">
+                    <div className="col-xl-6 col-12 side">
                         <Side scrollDiv={this.scrollDiv}/>
                     </div>
 
